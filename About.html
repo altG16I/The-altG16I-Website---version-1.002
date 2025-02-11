@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - altG16I</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -0.07em;
+            font-weight: 600;
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .hover-link {
+            transition: all 0.3s ease;
+        }
+        .hover-link:hover {
+            color: #A855F7;
+            transform: translateX(4px);
+        }
+        @keyframes verify-bounce {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-900 via-purple-900 to-black text-white min-h-screen">
+    <!-- Header with back button and logo -->
+    <header class="p-8 flex items-center justify-between">
+        <div class="flex items-center gap-4">
+            <a href="Home.html" class="bg-black/30 backdrop-blur-sm p-2 rounded-full hover:bg-black/50 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+            </a>
+        </div>
+        <a href="Home.html" class="text-2xl font-bold">altG16I</a>
+    </header>
+
+    <!-- Navigation (same as index.html) -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-lg">
+        <!-- ... (same navigation code as index.html) ... -->
+    </nav>
+
+    <!-- Main Content -->
+    <main class="pt-20 min-h-screen">
+        <div class="max-w-4xl mx-auto p-4 space-y-8 fade-in">
+            <!-- Name and Verification Section -->
+            <div class="flex flex-col items-center text-center mb-8">
+                <div class="flex items-center gap-3 mb-2">
+                    <h1 class="text-4xl font-bold">Rashmi Ranjan Mishra</h1>
+                    <svg class="h-8 w-8 text-blue-400" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle class="animate-[ping_2s_ease-in-out_infinite]" cx="12" cy="12" r="11" stroke="currentColor" stroke-width="2" stroke-opacity="0.2"/>
+                        <circle cx="12" cy="12" r="8" fill="currentColor"/>
+                        <path d="M8 12.5L10.5 15L16 9" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="animate-[bounce_1s_ease-in-out_infinite]"/>
+                    </svg>
+                </div>
+                <p class="text-gray-400 text-sm tracking-wide">Soon to be entrepreneur</p>
+            </div>
+
+            <div class="bg-black/30 backdrop-blur-sm rounded-xl p-6">
+                <p class="text-lg">
+                    "Hi, I'm Rashmi Ranjan Mishra, a 16-year-old tech enthusiast with a passion for all things digital. I have a strong interest in IT, Cybersecurity, Cloud Computing, and the inner workings of technology, including processors, RAM, laptops, and smartphones. I'm also fascinated by the world of UI/UX design and the art of creating user-friendly and visually appealing interfaces."
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-black/30 backdrop-blur-sm rounded-xl p-6">
+                    <h3 class="text-purple-400 mb-2">Age</h3>
+                    <p>16y/o</p>
+                </div>
+                <div class="bg-black/30 backdrop-blur-sm rounded-xl p-6">
+                    <h3 class="text-purple-400 mb-2">Nationality</h3>
+                    <p>Indian</p>
+                </div>
+                <div class="bg-black/30 backdrop-blur-sm rounded-xl p-6">
+                    <h3 class="text-purple-400 mb-2">Profile</h3>
+                    <p>Tech Savvy/Enthusiast</p>
+                </div>
+            </div>
+
+            <div class="bg-black/30 backdrop-blur-sm rounded-xl p-6">
+                <h2 class="text-2xl mb-4">Learning:</h2>
+                <ul class="space-y-2">
+                    <li>Microsoft Azure Cloud - (Aiming to be a specialist)</li>
+                    <li>IT fundamentals and complex understanding</li>
+                    <li>Cybersecurity VIA (Cisco)</li>
+                    <li>Computer architecture</li>
+                    <li>UI/UX designs</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Mobile menu toggle (same as index.html)
+    </script>
+</body>
+</html>

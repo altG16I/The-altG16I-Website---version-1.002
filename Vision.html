@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Vision - altG16I</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -0.07em;
+            font-weight: 600;
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .legal-section {
+            transition: background-color 0.3s ease;
+        }
+        .legal-section:hover {
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        .vision-text {
+            font-weight: 400;
+            line-height: 1.8;
+            letter-spacing: normal;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-900 via-purple-900 to-black text-white min-h-screen">
+    <!-- Header with back button and logo -->
+    <header class="p-8 flex items-center justify-between">
+        <div class="flex items-center gap-4">
+            <a href="Home.html" class="bg-black/30 backdrop-blur-sm p-2 rounded-full hover:bg-black/50 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+            </a>
+        </div>
+        <a href="Home.html" class="text-2xl font-bold">altG16I</a>
+    </header>
+
+    <main class="p-8">
+        <div class="max-w-4xl mx-auto fade-in space-y-6">
+            <!-- Title Section -->
+            <div class="bg-black/30 backdrop-blur-sm rounded-xl p-6">
+                <h1 class="text-3xl mb-2">My Vision</h1>
+                <p class="text-gray-300">What I perceive / what I want technology to look like in my terms & designs.</p>
+            </div>
+
+            <!-- Vision Statement -->
+            <div class="legal-section bg-black/30 backdrop-blur-sm rounded-xl p-6">
+                <div class="flex items-center gap-3 mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-400" fill="none" viewBox="0 0 24 24">
+                        <path 
+                            stroke-linecap="round" 
+                            stroke-linejoin="round" 
+                            stroke-width="2"
+                            stroke="currentColor"
+                            fill="none"
+                            d="M8 3H7a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"
+                        />
+                        <path 
+                            stroke-linecap="round" 
+                            stroke-linejoin="round" 
+                            stroke-width="2"
+                            stroke="currentColor"
+                            fill="none"
+                            d="M12 8v1m0 3v1m-3-2H8m8 0h-1m-2 4a3 3 0 100-6 3 3 0 000 6z"
+                        />
+                        <circle 
+                            cx="12" 
+                            cy="12" 
+                            r="7" 
+                            stroke="currentColor"
+                            stroke-width="2"
+                            fill="none"
+                        />
+                    </svg>
+                    <h2 class="text-xl text-purple-400">The Vision</h2>
+                </div>
+                <div class="vision-text space-y-6 text-gray-200">
+                    <p class="mb-6">My vision for technology transcends mere advancement - it's about fundamentally reimagining the relationship between humans and digital systems. I envision a future where technology serves as a catalyst for human potential and authentic connection, rather than a barrier or distraction.</p>
+                    
+                    <h3 class="text-lg text-purple-300 mb-4">Core Initiatives</h3>
+                    
+                    <div class="space-y-4">
+                        <p><span class="text-purple-300">First:</span> I'm developing an independent mobile operating system that breaks free from corporate ecosystems - one that returns genuine control to users while providing unparalleled privacy and customization. This isn't just another OS; it's a declaration of digital independence.</p>
+                        
+                        <p><span class="text-purple-300">Second:</span> I'm creating a revolutionary offline search engine that democratizes access to knowledge. By decentralizing information access and breaking down traditional barriers, we can empower individuals in even the most remote or restricted environments to access, share, and contribute to the world's knowledge base.</p>
+                        
+                        <p><span class="text-purple-300">Third:</span> I'm building a new paradigm of social connectivity - a platform that transcends the shallow engagement of current social media. This ecosystem prioritizes meaningful human bonds, facilitates collective action, and harnesses the power of community to drive positive change.</p>
+                    </div>
+                    
+                    <h3 class="text-lg text-purple-300 mt-8 mb-4">Core Values & Beliefs</h3>
+                    
+                    <div class="space-y-4">
+                        <p>These initiatives are united by a common thread: the belief that technology should expand human capability while preserving human dignity. We prioritize privacy not just as a feature, but as a fundamental right.</p>
+                        
+                        <p>We champion innovation not for its own sake, but as a means to foster equity and empowerment. We believe in creating tools that don't just connect people digitally, but nurture the depth and authenticity of human relationships.</p>
+                        
+                        <p>This isn't just about building better systems - it's about laying the foundation for a more equitable, connected, and human-centric digital future. A future where technology amplifies our collective potential while preserving our individual agency.</p>
+                        
+                        <p class="text-purple-300 mt-8">Together, we can build a technological ecosystem that doesn't just change what we can do - it transforms who we can become. This is more than a vision for technology; it's a vision for human flourishing in the digital age.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

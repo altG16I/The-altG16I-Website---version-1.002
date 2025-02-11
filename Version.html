@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Version Info - altG16I</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -0.07em;
+            font-weight: 600;
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .legal-section {
+            transition: background-color 0.3s ease;
+        }
+        .legal-section:hover {
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        .checking-animation {
+            animation: spin 1s linear infinite;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-blue-900 via-purple-900 to-black text-white min-h-screen">
+    <!-- Header with back button and logo -->
+    <header class="p-8 flex items-center justify-between">
+        <div class="flex items-center gap-4">
+            <a href="Home.html" class="bg-black/30 backdrop-blur-sm p-2 rounded-full hover:bg-black/50 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                </svg>
+            </a>
+        </div>
+        <a href="Home.html" class="text-2xl font-bold">altG16I</a>
+    </header>
+
+    <main class="p-8">
+        <div class="max-w-4xl mx-auto fade-in space-y-6">
+            <!-- Title Section -->
+            <div class="bg-black/30 backdrop-blur-sm rounded-xl p-6">
+                <h1 class="text-3xl mb-2">Version Info</h1>
+                <p class="text-gray-300">Current version and update status of altG16I</p>
+            </div>
+
+            <!-- Version Info Section -->
+            <div class="legal-section bg-black/30 backdrop-blur-sm rounded-xl p-6">
+                <div class="flex items-center gap-3 mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                    </svg>
+                    <h2 class="text-xl text-purple-400">Current Version</h2>
+                </div>
+                
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold mb-2">The altG16I Website</h3>
+                    <p class="text-gray-300 text-lg">Version 1.002</p>
+                </div>
+
+                <div class="space-y-4">
+                    <button id="checkUpdate" class="w-full bg-purple-600 hover:bg-purple-700 transition-colors rounded-lg p-4 flex items-center justify-center gap-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                        </svg>
+                        Check for Updates
+                    </button>
+                    
+                    <div id="updateStatus" class="hidden text-center p-4 rounded-lg bg-black/20">
+                        <div id="checking" class="hidden">
+                            <svg class="checking-animation h-6 w-6 mx-auto mb-2 text-purple-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                            </svg>
+                            <p>Checking for updates...</p>
+                        </div>
+                        <div id="upToDate" class="hidden">
+                            <svg class="h-6 w-6 mx-auto mb-2 text-green-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                            </svg>
+                            <p>Version up-to-date</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById('checkUpdate').addEventListener('click', function() {
+            const updateStatus = document.getElementById('updateStatus');
+            const checking = document.getElementById('checking');
+            const upToDate = document.getElementById('upToDate');
+            
+            // Show status container and checking animation
+            updateStatus.classList.remove('hidden');
+            checking.classList.remove('hidden');
+            upToDate.classList.add('hidden');
+            
+            // Simulate check delay
+            setTimeout(() => {
+                checking.classList.add('hidden');
+                upToDate.classList.remove('hidden');
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
